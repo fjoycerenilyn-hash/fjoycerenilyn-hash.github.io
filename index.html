@@ -6,13 +6,58 @@
     <title>Joyce Renilyn Fernandez | Client Success Manager</title>
 
     <style>
-        body {
+        section {
+    padding: 80px 0;
+}
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 0 auto;
+}
+
+section {
+    background-color: transparent;
+}
+
+      body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(180deg, #f2f2f2 0%, #e9e9e9 100%);
+    background: linear-gradient(180deg, #f6f6f6 0%, #efefef 100%);
     color: #2c2c2c;
     line-height: 1.6;
 }
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #1f3c4c;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e5e5e5;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+}
+
+.btn-outline {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255,255,255,0.18);
+}
+
 
         a { text-decoration: none; color: inherit; }
 
@@ -21,72 +66,116 @@
             max-width: 1100px;
             margin: auto;
         }
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-photo {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.8);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+}
+
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+}
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+    .hero {
+    background: linear-gradient(135deg, #1f3c4c, #2f5d73);
+    color: #ffffff;
+    padding: 90px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    top: -200px;
+    right: -200px;
+    filter: blur(2px);
+    opacity: 0.7;
+}
+
+.hero-grid {
+    position: relative;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.20);
+}
+
+}
 
         /* HERO */
-        .hero {
-            background: linear-gradient(135deg, #1f3c4c, #2f5d73);
-            color: #ffffff;
-            padding: 90px 0;
-            text-align: center;
-        }
+        <div class="hero">
+    <div class="container hero-grid">
 
-        .hero h1 {
-            font-size: 2.9rem;
-            margin-bottom: 10px;
-        }
+        <div class="hero-photo">
+            <img src="joyce-photo.jpg" alt="Joyce Renilyn Fernandez" class="profile-photo">
+        </div>
 
-        .hero span {
-            display: block;
-            font-size: 1.35rem;
-            font-weight: 400;
-            margin-top: 8px;
-        }
+        <div class="hero-content">
+            <h1>
+                Joyce Renilyn Fernandez
+                <span>Client Success Manager</span>
+            </h1>
 
-        .hero p {
-            font-size: 1.15rem;
-            max-width: 800px;
-            margin: 25px auto 0;
-        }
+            <p class="availability">
+                Open to Remote | Global Clients | Long-Term Roles
+            </p>
 
-        .hero-buttons {
-            margin-top: 35px;
-        }
+            <p>
+                Client Success Manager with 10+ years of combined experience across Client Success,
+                Team Leadership, and Quality Analytics. I support global businesses by improving
+                client retention, operational efficiency, and service quality through structured,
+                people-focused processes.
+            </p>
 
-        .btn {
-            display: inline-block;
-            padding: 13px 28px;
-            margin: 10px;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: 0.3s ease;
-        }
+            <div class="hero-buttons">
+                <a href="Joyce-Fernandez-Resume.pdf" class="btn btn-primary" download>Download Resume</a>
+                <a href="#contact" class="btn btn-outline">Hire Me</a>
+            </div>
+        </div>
 
-        .btn-primary {
-            background-color: #ffffff;
-            color: #1f3c4c;
-        }
+    </div>
+</div>
 
-        .btn-primary:hover {
-            background-color: #e4edf2;
-        }
-
-        .btn-outline {
-            border: 2px solid #ffffff;
-            color: #ffffff;
-        }
-
-        .btn-outline:hover {
-            background-color: rgba(255,255,255,0.15);
-        }
-
-        section { padding: 80px 0; }
-
-        section h2 {
-            text-align: center;
-            font-size: 2.1rem;
-            margin-bottom: 45px;
-            color: #1f3c4c;
-        }
 
         /* ABOUT */
         .about p {
@@ -97,23 +186,20 @@
         }
 
         /* SKILLS */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 28px;
-        }
-
         .skill-card {
-            background-color: #ffffff;
-            padding: 28px;
-            border-radius: 8px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-        }
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #e5e5e5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .skill-card h3 {
-            margin-top: 0;
-            color: #2f5d73;
-        }
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
 
         /* EXPERIENCE */
         .experience {
@@ -341,6 +427,7 @@
 
 </body>
 </html>
+
 
 
 
