@@ -20,13 +20,71 @@ section {
     background-color: transparent;
 }
 
-      body {
+     body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(180deg, #f6f6f6 0%, #efefef 100%);
-    color: #2c2c2c;
+    background: #f2f2f2;
+    color: #111111;
     line-height: 1.6;
 }
+
+/* HERO */
+.hero {
+    background: #000000;
+    color: #ffffff;
+    padding: 90px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.hero-photo {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.8);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero span {
+    display: block;
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+}
+
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 13px 28px;
@@ -38,7 +96,7 @@ section {
 
 .btn-primary {
     background-color: #ffffff;
-    color: #1f3c4c;
+    color: #000000;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     border: 1px solid #e5e5e5;
 }
@@ -58,135 +116,20 @@ section {
     background-color: rgba(255,255,255,0.18);
 }
 
-
-        a { text-decoration: none; color: inherit; }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    align-items: center;
+/* Sections */
+section {
+    padding: 80px 0;
 }
 
-.hero-photo {
-    display: flex;
-    justify-content: center;
-}
-
-.profile-photo {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid rgba(255,255,255,0.8);
-    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
-}
-
-}
-
-.hero-content {
-    text-align: left;
-}
-
-.hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.15rem;
-}
-
-@media (max-width: 900px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .hero-content {
-        text-align: center;
-    }
-    .hero {
-    background: linear-gradient(135deg, #1f3c4c, #2f5d73);
-    color: #ffffff;
-    padding: 90px 0;
+section h2 {
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    font-size: 2.1rem;
+    margin-bottom: 45px;
+    color: #111111;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
-    top: -200px;
-    right: -200px;
-    filter: blur(2px);
-    opacity: 0.7;
-}
-
-.hero-grid {
-    position: relative;
-    background: rgba(255,255,255,0.08);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.20);
-}
-
-}
-
-        /* HERO */
-        <div class="hero">
-    <div class="container hero-grid">
-
-        <div class="hero-photo">
-            <img src="joyce-photo.jpg" alt="Joyce Renilyn Fernandez" class="profile-photo">
-        </div>
-
-        <div class="hero-content">
-            <h1>
-                Joyce Renilyn Fernandez
-                <span>Client Success Manager</span>
-            </h1>
-
-            <p class="availability">
-                Open to Remote | Global Clients | Long-Term Roles
-            </p>
-
-            <p>
-                Client Success Manager with 10+ years of combined experience across Client Success,
-                Team Leadership, and Quality Analytics. I support global businesses by improving
-                client retention, operational efficiency, and service quality through structured,
-                people-focused processes.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="Joyce-Fernandez-Resume.pdf" class="btn btn-primary" download>Download Resume</a>
-                <a href="#contact" class="btn btn-outline">Hire Me</a>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-        /* ABOUT */
-        .about p {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            font-size: 1.07rem;
-        }
-
-        /* SKILLS */
-        .skill-card {
+/* Cards */
+.skill-card {
     background-color: #ffffff;
     padding: 28px;
     border-radius: 14px;
@@ -200,56 +143,65 @@ section {
     box-shadow: 0 14px 40px rgba(0,0,0,0.12);
 }
 
+.skill-card h3 {
+    margin-top: 0;
+    color: #000000;
+}
 
-        /* EXPERIENCE */
-        .experience {
-            background-color: #ffffff;
-        }
+/* Experience */
+.experience {
+    background-color: #ffffff;
+}
 
-        .experience p {
-            max-width: 950px;
-            margin: auto;
-            font-size: 1.07rem;
-        }
+.experience p {
+    max-width: 950px;
+    margin: auto;
+    font-size: 1.07rem;
+}
 
-        /* CTA */
-        .cta {
-            background-color: #2f5d73;
-            color: #ffffff;
-            text-align: center;
-            padding: 80px 0;
-        }
+/* CTA */
+.cta {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 0;
+}
 
-        .cta h2 { color: #ffffff; }
+.cta h2 {
+    color: #ffffff;
+}
 
-        /* FOOTER */
-        footer {
-            background-color: #1f3c4c;
-            color: #ffffff;
-            text-align: center;
-            padding: 35px 0;
-        }
+/* Footer */
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 0;
+}
 
-        .social-links a {
-            margin: 0 12px;
-            font-weight: 600;
-        }
+.social-links a {
+    margin: 0 12px;
+    font-weight: 600;
+}
 
-        footer p {
-            margin: 10px 0 0;
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        .availability {
-    margin-top: 12px;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+footer p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
     opacity: 0.9;
 }
-.why-hire {
-    background-color: #f4f6f9;
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
 }
+
 
     </style>
 </head>
@@ -427,6 +379,7 @@ section {
 
 </body>
 </html>
+
 
 
 
