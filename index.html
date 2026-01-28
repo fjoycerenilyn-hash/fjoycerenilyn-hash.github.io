@@ -4,381 +4,387 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joyce Renilyn Fernandez | Client Success Manager</title>
-
     <style>
+        /* ---------- BASE ---------- */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #2b2b2b; /* Dark grey */
+            color: #f0f0f0;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Smooth scroll */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ---------- NAV ---------- */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 12px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #d6d6d6;
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            padding: 120px 0 90px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-photo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e0e0e0;
+            box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .hero span {
+            display: block;
+            font-size: 1.35rem;
+            font-weight: 400;
+            margin-top: 8px;
+            color: #cfcfcf;
+        }
+
+        .availability {
+            margin-top: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #d6d6d6;
+        }
+
+        /* ---------- BUTTONS ---------- */
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            margin: 10px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: #d6d6d6;
+            color: #2b2b2b;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 1px solid #cfcfcf;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+        }
+
+        .btn-outline {
+            border: 2px solid #d6d6d6;
+            color: #d6d6d6;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            transform: translateY(-2px);
+            background-color: rgba(214,214,214,0.15);
+        }
+
+        /* ---------- SECTIONS ---------- */
         section {
-    padding: 80px 0;
-}
-.section-divider {
-    width: 100%;
-    height: 1px;
-    background-color: #dcdcdc;
-    margin: 0 auto;
-}
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
 
-section {
-    background-color: transparent;
-}
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-     body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f2f2f2;
-    color: #111111;
-    line-height: 1.6;
-}
+        section h2 {
+            text-align: center;
+            font-size: 2.1rem;
+            margin-bottom: 45px;
+            color: #f0f0f0;
+        }
 
-/* HERO */
-.hero {
-    background: #000000;
-    color: #ffffff;
-    padding: 90px 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+        /* ---------- SKILLS ---------- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            justify-items: center;
+        }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    align-items: center;
-    position: relative;
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-}
+        .skill-card {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background-color: #3a3a3a; /* ash grey */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.hero-photo {
-    display: flex;
-    justify-content: center;
-}
+        .skill-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+        }
 
-.profile-photo {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid rgba(255,255,255,0.8);
-    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
-}
+        .skill-card h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            color: #f0f0f0;
+        }
 
-.hero-content {
-    text-align: left;
-}
+        /* ---------- EXPERIENCE ---------- */
+        .experience {
+            background-color: #3a3a3a;
+            border-radius: 16px;
+            padding: 50px 20px;
+        }
 
-.hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-}
+        .experience p {
+            max-width: 950px;
+            margin: auto;
+            font-size: 1.07rem;
+            color: #e8e8e8;
+        }
 
-.hero span {
-    display: block;
-    font-size: 1.35rem;
-    font-weight: 400;
-    margin-top: 8px;
-}
+        /* ---------- CTA ---------- */
+        .cta {
+            background-color: #1f1f1f;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 80px 0;
+        }
 
-.hero p {
-    font-size: 1.15rem;
-}
+        .cta h2 {
+            color: #f0f0f0;
+        }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 13px 28px;
-    margin: 10px;
-    border-radius: 10px;
-    font-weight: 600;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        /* ---------- FOOTER ---------- */
+        footer {
+            background-color: #111111;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 35px 0;
+        }
 
-.btn-primary {
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    border: 1px solid #e5e5e5;
-}
+        .social-links a {
+            margin: 0 12px;
+            font-weight: 600;
+            color: #f0f0f0;
+            text-decoration: none;
+        }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.14);
-}
+        footer p {
+            margin: 10px 0 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
 
-.btn-outline {
-    border: 2px solid #ffffff;
-    color: #ffffff;
-}
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
 
-.btn-outline:hover {
-    transform: translateY(-2px);
-    background-color: rgba(255,255,255,0.18);
-}
+            .hero-content {
+                text-align: center;
+            }
 
-/* Sections */
-section {
-    padding: 80px 0;
-}
-
-section h2 {
-    text-align: center;
-    font-size: 2.1rem;
-    margin-bottom: 45px;
-    color: #111111;
-}
-
-/* Cards */
-.skill-card {
-    background-color: #ffffff;
-    padding: 28px;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border: 1px solid #e5e5e5;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 40px rgba(0,0,0,0.12);
-}
-
-.skill-card h3 {
-    margin-top: 0;
-    color: #000000;
-}
-
-/* Experience */
-.experience {
-    background-color: #ffffff;
-}
-
-.experience p {
-    max-width: 950px;
-    margin: auto;
-    font-size: 1.07rem;
-}
-
-/* CTA */
-.cta {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 80px 0;
-}
-
-.cta h2 {
-    color: #ffffff;
-}
-
-/* Footer */
-footer {
-    background-color: #111111;
-    color: #ffffff;
-    text-align: center;
-    padding: 35px 0;
-}
-
-.social-links a {
-    margin: 0 12px;
-    font-weight: 600;
-}
-
-footer p {
-    margin: 10px 0 0;
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .hero-content {
-        text-align: center;
-    }
-}
-
-
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
     </style>
 </head>
-
 <body>
 
+<!-- NAV -->
+<nav>
+    <div class="container">
+        <div class="logo">
+            <strong>Joyce Renilyn Fernandez</strong>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
 <!-- HERO -->
-<div class="hero">
-    <div class="container">
-        <h1>
-            Joyce Renilyn Fernandez
-            <span>Client Success Manager</span>
-        </h1>
-<p class="availability">
-    Open to Remote | Global Clients | Long-Term Roles
-</p>
-
-        <p>
-            Client Success Manager with 10+ years of combined experience across Client Success,
-            Team Leadership, and Quality Analytics. I support global businesses by improving
-            client retention, operational efficiency, and service quality through structured,
-            people-focused processes.
-        </p>
-
-        <div class="hero-buttons">
-    <a href="Joyce-Fernandez-Resume.pdf" class="btn btn-primary" download>Download Resume</a>
-    <a href="https://www.linkedin.com/in/joyce-renilyn-fernandez-97486537b" class="btn btn-outline" target="_blank">LinkedIn</a>
-    <a href="https://www.facebook.com/joycerenilyn.fernandez" class="btn btn-outline" target="_blank">Facebook</a>
-    <a href="mailto:fjoycerenilyn@gmail.com" class="btn btn-outline">Email Me</a>
-</div>
-
-<!-- ABOUT -->
-<section class="about">
-    <div class="container">
-        <h2>Professional Summary</h2>
-        <p>
-            I am a results-oriented Client Success Manager with 2 years of direct client ownership,
-            backed by 3 years as a Team Leader and 5 years as a Quality Analyst.
-            My career progression reflects a strong foundation in quality, people management,
-            and client experience.
-            I work with global teams to ensure clients remain engaged, supported, and confident
-            in the services they receive.
-        </p>
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-photo">
+            <img src="joyce-photo.jpg" alt="Joyce Renilyn Fernandez" class="profile-photo">
+        </div>
+        <div class="hero-content">
+            <h1>Joyce Renilyn Fernandez <span>Client Success Manager</span></h1>
+            <p class="availability">Open to Remote | Global Clients | Long-Term Roles</p>
+            <p>
+                Client Success Manager with 10+ years of combined experience across Client Success,
+                Team Leadership, and Quality Analytics. I help businesses improve client satisfaction,
+                operational efficiency, and team performance through structured, data-driven support.
+            </p>
+            <div class="hero-buttons">
+                <a href="Joyce-Fernandez-Resume.pdf" class="btn btn-primary" download>Download Resume</a>
+                <a href="https://www.linkedin.com/in/yourprofile" class="btn btn-outline" target="_blank">LinkedIn</a>
+                <a href="https://www.facebook.com/yourprofile" class="btn btn-outline" target="_blank">Facebook</a>
+                <a href="mailto:yourname@gmail.com" class="btn btn-outline">Email Me</a>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- SKILLS -->
-<section>
-    <div class="container">
-        <h2>Core Competencies</h2>
+<!-- ABOUT -->
+<section id="about" class="container">
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width: 850px; margin: auto;">
+        I provide high-quality administrative support, client relationship management, and operational coordination for global clients.
+        My goal is to create smooth workflows, increase client retention, and ensure consistent service quality through strong communication
+        and process discipline.
+    </p>
+</section>
 
+<!-- SKILLS -->
+<section id="skills">
+    <div class="container">
+        <h2>Skills & Expertise</h2>
         <div class="skills-grid">
             <div class="skill-card">
                 <h3>Client Success Management</h3>
-                <p>
-                    Client onboarding, account management, retention strategies,
-                    stakeholder communication, escalation handling, and success planning.
-                </p>
             </div>
-
             <div class="skill-card">
-                <h3>Administrative & Operations Support</h3>
-                <p>
-                    Calendar and inbox management, documentation, reporting,
-                    CRM updates, workflow coordination, and process support.
-                </p>
+                <h3>Administrative Support</h3>
             </div>
-
             <div class="skill-card">
                 <h3>Quality Analytics</h3>
-                <p>
-                    KPI tracking, performance audits, root cause analysis,
-                    compliance monitoring, and continuous improvement initiatives.
-                </p>
             </div>
-
             <div class="skill-card">
                 <h3>Team Leadership</h3>
-                <p>
-                    Team supervision, coaching, performance reviews,
-                    SOP creation, and cross-functional collaboration.
-                </p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="experience">
-    <div class="container">
-        <h2>Career Background</h2>
+<section id="experience" class="container">
+    <h2>Experience</h2>
+    <div class="experience">
         <p>
-            My professional background spans Client Success Management, Team Leadership,
-            and Quality Analytics, allowing me to approach client relationships with both
-            strategic insight and operational discipline.
-            I have partnered with global clients to improve service delivery,
-            strengthen client trust, and maintain consistent quality standards.
-            Known for reliability, attention to detail, and clear communication,
-            I am well-suited for long-term remote roles supporting growing teams.
+            With 2 years as a Client Success Manager, 3 years as a Team Leader, and 5 years as a Quality Analyst,
+            I bring a strong mix of client-focused support, operational leadership, and data-driven quality control.
+            I have experience working with diverse teams and global clients, ensuring clear communication,
+            consistent performance, and measurable improvements in client satisfaction and process efficiency.
         </p>
-    </div>
-</section>
-<section class="why-hire">
-    <div class="container">
-        <h2>Why Hire Me</h2>
-
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Proven Career Progression</h3>
-                <p>
-                    My experience spans Quality Analytics, Team Leadership, and Client Success Management,
-                    giving me a well-rounded perspective on performance, people, and client experience.
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Quality-Driven Mindset</h3>
-                <p>
-                    With a strong foundation in quality analysis, I approach every task with accuracy,
-                    process discipline, and continuous improvement in mind.
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Client-Centered Approach</h3>
-                <p>
-                    I focus on building trust, maintaining clear communication, and ensuring clients
-                    feel supported, informed, and confident in the services they receive.
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Reliable for Long-Term Roles</h3>
-                <p>
-                    I am dependable, detail-oriented, and comfortable working with global teams,
-                    making me a strong fit for long-term remote partnerships.
-                </p>
-            </div>
-        </div>
     </div>
 </section>
 
 <!-- CTA -->
-<div class="cta" id="contact">
+<section id="contact" class="cta">
     <div class="container">
         <h2>Let’s Work Together</h2>
-        <p>
-            If you’re hiring a Client Success Manager who understands quality,
-            leadership, and client experience — let’s connect.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="https://www.linkedin.com/in/joyce-renilyn-fernandez-97486537b" class="btn btn-primary">LinkedIn</a>
-            <a href="https://www.facebook.com/joycerenilyn.fernandez" class="btn btn-outline">Facebook</a>
-            <a <a href="mailto:fjoycerenilyn@gmail.com" class="btn btn-outline">Email Me</a>
-        </div>
+        <p>Ready to elevate your client success and operations? Reach out to discuss how I can support your business.</p>
+        <a href="mailto:yourname@gmail.com" class="btn btn-primary">Email Me</a>
     </div>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
     <div class="container">
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> |
-            <a href="https://www.facebook.com/yourprofile">Facebook</a> |
-            <a <a href="mailto:fjoycerenilyn@gmail.com">Email Me</a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+            <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a> |
+            <a href="mailto:yourname@gmail.com">Email Me</a>
         </div>
-
-        <p>Client Success • Operations • Quality Leadership</p>
+        <p>Client Success Manager | Administrative Support | Quality Analytics | Team Leadership</p>
         <p>© 2026 Joyce Renilyn Fernandez. All rights reserved.</p>
     </div>
 </footer>
 
+<script>
+    // ---------- SECTION ANIMATION ----------
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
 </body>
 </html>
-
-
 
 
 
