@@ -10,9 +10,8 @@
 <!-- Font Awesome (optional fallback) -->
 <link
   rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
-
     <style>
         /* ---------- BASE ---------- */
         body {
@@ -263,16 +262,29 @@
             .skills-grid {
                 grid-template-columns: 1fr 1fr;
             }
-        }
-        .tools-icons {
+.tools-icons {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-.tools-icons img {
-  width: 42px;
-  height: 42px;
+.tool {
+  text-align: center;
+  width: 90px;
+}
+
+.tool i,
+.tool img {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+}
+
+.tool span {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
 }
 
     </style>
@@ -351,9 +363,43 @@
     <section id="tools">
   <h2>Tools I Know</h2>
   <div class="tools-icons">
-    <img src="https://skillicons.dev/icons?i=slack,salesforce,teams,excel" alt="Slack, Salesforce, Teams, Excel">
+
+  <!-- Slack -->
+  <div class="tool">
+    <i class="fa-brands fa-slack"></i>
+    <span>Slack</span>
   </div>
-</section>
+
+  <!-- Salesforce -->
+  <div class="tool">
+    <i class="fa-brands fa-salesforce"></i>
+    <span>Salesforce</span>
+  </div>
+
+  <!-- Microsoft Teams -->
+  <div class="tool">
+    <i class="fa-brands fa-microsoft"></i>
+    <span>Teams</span>
+  </div>
+
+  <!-- Microsoft Excel -->
+  <div class="tool">
+    <i class="fa-solid fa-file-excel"></i>
+    <span>Excel</span>
+  </div>
+
+  <!-- Custom icons (images) -->
+  <div class="tool">
+    <img src="assets/icons/google-space.svg" alt="Google Space">
+    <span>Google Space</span>
+  </div>
+
+  <div class="tool">
+    <img src="assets/icons/gorgias.svg" alt="Gorgias">
+    <span>Gorgias</span>
+  </div>
+
+</div>
 
 
     <!-- Skill Icons -->
@@ -423,6 +469,7 @@
 
 </body>
 </html>
+
 
 
 
